@@ -10,23 +10,12 @@ module Dish
       end
     end
 
-    def initialize(hash)
-      @hash = Hash[hash.map { |k, v| [k.to_s, v] }]
+    def initialize(json)
+      @hash = Hash[json.map { |k, v| [k.to_s, v] }]
       @cache = Hash.new do |cache, key|
         cache[key] = _convert(@hash[key], self.class.coercions[key])
       end
     end
-
-    def hash
-      to_h.hash
-    end
-
-    def ==(other)
-      return false unless other.respond_to?(:to_h)
-      to_h == other.to_h
-    end
-
-    alias :eql? :==
 
     def method_missing(method, *args, &block)
       method = method.to_s
@@ -44,24 +33,9 @@ module Dish
       _key?(method.to_s) || super
     end
 
-    def to_h
-      hash
-    end
 
-    def to_json(*args)
-      # If we're using RubyMotion #to_json isn't available like with Ruby's JSON stdlib
-      if defined?(Motion::Project::Config)
-        # From BubbleWrap: https://github.com/rubymotion/BubbleWrap/blob/master/motion/core/json.rb#L30-L32
-        NSJSONSerialization.dataWithJSONObject(to_h, options: 0, error: nil).to_str
-      elsif defined?(JSON)
-        to_h.to_json(*args)
-      else
-        raise "#{self.class}#to_json depends on Hash#to_json. Try again after using `require 'json'`."
-      end
-    end
 
     def methods(regular = true)
-      valid_keys = to_h.keys.map(&:to_sym)
       valid_keys + super
     end
 
