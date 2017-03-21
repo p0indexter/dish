@@ -19,8 +19,8 @@
       <file leaf-file-name="plate.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/dish/plate.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="17" />
+            <state relative-caret-position="574">
+              <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -165,12 +165,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490107100197</updated>
-      <workItem from="1490107101588" duration="1212000" />
+      <workItem from="1490107101588" duration="1492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1212000" />
+    <option name="totallyTimeSpent" value="1492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -224,8 +224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/dish/plate.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="17" />
+        <state relative-caret-position="574">
+          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
           <folding />
         </state>
       </provider>
