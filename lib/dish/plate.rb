@@ -41,20 +41,17 @@ module Dish
 
     private
 
-    attr_reader :hash
-    attr_reader :cache
-
     def _get(key)
-      cache[key]
+      @cache[key]
     end
 
     def _set(key, value)
-      cache.delete(key)
-      hash[key] = value
+      @cache.delete(key)
+      @hash[key] = value
     end
 
     def _key?(key)
-      hash.key?(key)
+      @hash.key?(key)
     end
 
     def _convert(value, coercion)
