@@ -33,9 +33,14 @@ module Dish
       _key?(method.to_s) || super
     end
 
+    def to_direct
+      @hash
+    end
+
 
 
     def methods(regular = true)
+      valid_keys = to_direct.keys.map(&:to_sym)
       valid_keys + super
     end
 
